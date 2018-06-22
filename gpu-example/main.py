@@ -6,7 +6,7 @@ from datetime import datetime
 
 #device_name = "/gpu:0"
 device_name = "/cpu:0"
-shape = [21000,21000]
+shape = [20000,20000]
 with tf.device(device_name):
     random_matrix = tf.random_uniform(shape=shape, minval=0, maxval=1)
     dot_operation = tf.matmul(random_matrix, tf.transpose(random_matrix))
